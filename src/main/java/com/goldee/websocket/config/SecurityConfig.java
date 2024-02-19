@@ -35,11 +35,11 @@ public class SecurityConfig {
                                 .csrf(csrf -> csrf.disable())
                                 .cors(c -> c.configurationSource(corsConfigurationSource()))
                                 .authorizeHttpRequests((authorize) -> authorize
-                                                // .requestMatchers("/", "/index.html", "/static/**", "/api/auth/**",
-                                                // "/**.jpg",
-                                                // "/ws/**")
-                                                // .permitAll()
-                                                .requestMatchers("/**").permitAll()
+                                                .requestMatchers("/", "/index.html", "/static/**", "/api/auth/**",
+                                                                "/**.jpg",
+                                                                "/ws/**")
+                                                .permitAll()
+                                                // .requestMatchers("/**").permitAll()
                                                 .anyRequest().authenticated())
                                 .sessionManagement((session) -> session
                                                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
