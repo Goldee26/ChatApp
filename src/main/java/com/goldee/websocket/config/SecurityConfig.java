@@ -82,7 +82,8 @@ public class SecurityConfig {
                 // configuration.addAllowedMethod("*"); // Allow all HTTP methods
                 // configuration.addAllowedHeader("*"); // Allow all header
                 configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000",
-                                "http://127.0.0.1:5501/,http://localhost:60207"));
+                                "http://127.0.0.1:5501/", "http://localhost:60207",
+                                "https://chatapp-production-074f.up.railway.app/"));
                 configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
                 configuration.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
                 configuration.setAllowCredentials(true);
